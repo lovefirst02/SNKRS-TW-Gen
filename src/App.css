@@ -1,0 +1,70 @@
+body {
+  background-color: rgb(201, 201, 201);
+}
+
+.App {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.App a {
+  text-decoration: none;
+}
+
+.App a :hover {
+  background-color: rgb(214, 255, 187);
+}
+
+.App a p {
+  color: black;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  background-color: rgb(192, 180, 180);
+  box-shadow: 6px 6px 12px rgb(90, 90, 90);
+}
+
+.shoe {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.shoestock {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(192, 180, 180);
+  margin: 20px;
+  width: 400px;
+  height: 590px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 6px 6px 12px rgb(90, 90, 90);
+}
+
+.shoestock p {
+  margin: auto;
+}
+
+.link {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(192, 180, 180);
+  margin: 20px;
+  width: 400px;
+  height: 590px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 6px 6px 12px rgb(90, 90, 90);
+}
+
+.link a {
+  text-decoration: none;
+  margin: auto;
+}
