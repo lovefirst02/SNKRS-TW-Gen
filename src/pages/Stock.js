@@ -56,11 +56,11 @@ function Stock() {
     <>
       {s.map(({ productInfo }) =>
         productInfo.map((item) => (
-          <Card id={item.merchProduct.styleColor} className='box'>
+          <Card id={item.merchProduct.styleColor} className='box' style={{ width: '400px', marginLeft: '10px' }}>
             <Card.Img id={item.merchProduct.styleColor} src={item.imageUrls.productImageUrl} to />
             <Card.Body>
-              <Card.Title>{item.merchProduct.labelName}</Card.Title>
-              <Card.Text>
+              <Card.Title style={{ color: 'white' }}>{item.merchProduct.labelName}</Card.Title>
+              <Card.Text style={{ color: 'white' }}>
                 <p>{item.merchProduct.styleColor}</p>
                 <Time props={item.merchProduct.id} />
                 <p
@@ -116,8 +116,8 @@ function Stock() {
                     item.productContent.slug
                   }/`}
                   target='_blank'
-                  variant='link'
-                  style={{ height: '35px' }}
+                  variant='secondary'
+                  style={{ height: '30px', margin: '2px' }}
                 >
                   US {nikeSize} -- {localizedSize}
                 </Button>
@@ -132,26 +132,50 @@ function Stock() {
   );
 
   return (
-    <div className='shoe'>
-      <B s={pd} />
-      <Card className='shoestock' style={{ width: '25rem' }}>
-        <Card.Body>
-          <Card.Title className='text-center'>尺碼-庫存</Card.Title>
-          <Card.Text style={{ fontSize: '21px' }}>
-            <Level s={pd} />
-          </Card.Text>
-        </Card.Body>
-      </Card>
-      <Card className='link'>
-        <Card.Body>
-          <Card.Title className='text-center text-justify align-middle'>抽籤連結</Card.Title>
-          <Card.Text style={{ margin: 'auto' }}>
-            <ButtonGroup vertical>
-              <Gen s={pd} />
-            </ButtonGroup>
-          </Card.Text>
-        </Card.Body>
-      </Card>
+    <div className='container-fluid'>
+      <div className='row justify-content-center align-items-center'>
+        <div className='shoe col-3'>
+          <B s={pd} />
+          <Card className='text-center text-white' style={{ background: '#5f5f64' }}>
+            <Card.Header as='h5'>說明</Card.Header>
+            <Card.Body style={{ margin: '25px' }}>
+              <Card.Text>於抽籤連結欄點擊你想要的尺寸，即跳出網頁</Card.Text>
+              <footer style={{ margin: 'auto', fontSize: '10px' }}>Made by Cody#3850</footer>
+              <a
+                class='btn btn-icon btn-twitter'
+                href='https://twitter.com/jiouhaowang'
+                target='_blank'
+                style={{ marginTop: '15px' }}
+              >
+                <i class='fa fa-twitter'></i>
+                <span>Twitter</span>
+              </a>
+            </Card.Body>
+          </Card>
+        </div>
+        <div className='col-4 justify-content-center align-items-center'>
+          <Card className='text-center text-white' style={{ margin: '10px', background: '#5f5f64' }}>
+            <Card.Header as='h5'>尺碼-庫存</Card.Header>
+            <Card.Body style={{ margin: '25px' }}>
+              <Card.Text>
+                <Level s={pd} />
+              </Card.Text>
+              <footer style={{ margin: '30px', fontSize: '10px' }}>Made by Cody#3850</footer>
+            </Card.Body>
+          </Card>
+        </div>
+        <div className='col-4 justify-content-center align-items-center'>
+          <Card className='text-center text-white' style={{ margin: '10px', background: '#5f5f64' }}>
+            <Card.Header as='h5'>尺碼-庫存</Card.Header>
+            <Card.Body style={{ margin: '62px' }}>
+              <ButtonGroup vertical>
+                <Gen s={pd} />
+              </ButtonGroup>
+              <footer style={{ margin: '30px', fontSize: '10px' }}>Made by Cody#3850</footer>
+            </Card.Body>
+          </Card>
+        </div>
+      </div>
     </div>
   );
 }

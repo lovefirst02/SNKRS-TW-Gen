@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Time from '../componet/time';
 import { Link } from 'react-router-dom';
-import { Card } from 'react-bootstrap';
+import { Card, Accordion, Button } from 'react-bootstrap';
+import '../social.css';
 
 const api =
   'https://api.nike.com/product_feed/threads/v2/?anchor=0&count=50&filter=marketplace%28TW%29&filter=language%28zh-Hant%29&filter=upcoming%28true%29&filter=channelId%28010794e5-35fe-4e32-aaff-cd2c74f89d61%29';
@@ -47,7 +48,26 @@ function Products() {
     </>
   );
 
-  return <All s={allPd} />;
+  return (
+    <>
+      <div className='row'>
+        <All s={allPd} />
+      </div>
+      <div className='col-4 offset-4 justify-content-center align-items-center'>
+        <Card className='text-center text-white' style={{ margin: '50px', background: '#5f5f64' }}>
+          <Card.Header as='h5'>說明</Card.Header>
+          <Card.Body style={{ margin: '25px' }}>
+            <Card.Text>點擊產品即可進入產品庫存與抽籤連結頁面</Card.Text>
+            <footer style={{ margin: '30px', fontSize: '10px' }}>Made by Cody#3850</footer>
+            <a class='btn btn-icon btn-twitter' href='https://twitter.com/jiouhaowang' target='_blank'>
+              <i class='fa fa-twitter'></i>
+              <span>Twitter</span>
+            </a>
+          </Card.Body>
+        </Card>
+      </div>
+    </>
+  );
 }
 
 export default Products;
