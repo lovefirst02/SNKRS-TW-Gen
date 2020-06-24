@@ -18,18 +18,6 @@ function Products() {
       });
   };
 
-  const handleClick = (e) => {
-    setSku(e.target.id);
-    const c = [...allPd];
-    c.map((item) => {
-      item.productInfo.map((i) => {
-        if (i.merchProduct.styleColor === sku) {
-          setAllPd([item]);
-        }
-      });
-    });
-  };
-
   useEffect(() => {
     getSnkrs();
   }, []);
@@ -38,7 +26,11 @@ function Products() {
     <>
       {s.map(({ productInfo }) =>
         productInfo.map((item) => (
-          <Link to={{ pathname: `/${item.merchProduct.id}`, state: { modal: true } }} target='_self'>
+          <Link
+            to={{ pathname: `/${item.merchProduct.id}`, state: { modal: true } }}
+            target='_self'
+            style={item.merchProduct.styleColor === '136064-140' ? { display: 'none' } : {}}
+          >
             <Card id={item.merchProduct.styleColor} className='box'>
               <Card.Img id={item.merchProduct.styleColor} src={item.imageUrls.productImageUrl} to />
               <Card.Body>

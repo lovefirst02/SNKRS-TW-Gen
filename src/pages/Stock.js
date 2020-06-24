@@ -14,7 +14,8 @@ function Stock() {
   const { modal } = state;
   const [pd, setPd] = useState([]);
   let { id } = useParams();
-  const launchId = useLaunhId(id);
+  const { lid } = useLaunhId(id);
+  const { status } = useLaunhId(id);
 
   const getSnkrs = () => {
     fetch(api)
@@ -62,6 +63,21 @@ function Stock() {
               <Card.Text>
                 <p>{item.merchProduct.styleColor}</p>
                 <Time props={item.merchProduct.id} />
+                <p
+                  style={
+                    status === 'LAUNCH_CLOSED'
+                      ? { color: 'red', fontSize: '20px' }
+                      : status === 'NOT_ACCEPTING_ENTRIES'
+                      ? { color: 'yellow', fontSize: '20px' }
+                      : { color: 'green', fontSize: '20px' }
+                  }
+                >
+                  {status === 'LAUNCH_CLOSED'
+                    ? '關閉投籤'
+                    : status === 'NOT_ACCEPTING_ENTRIES'
+                    ? '尚未接受投籤'
+                    : '開放投籤'}
+                </p>
               </Card.Text>
             </Card.Body>
           </Card>
@@ -96,7 +112,7 @@ function Stock() {
             item.skus.map(({ id, countrySpecifications, nikeSize }) =>
               countrySpecifications.map(({ localizedSize }) => (
                 <Button
-                  href={`https://gs.nike.com/?checkoutId=${uuid4()}&launchId=${launchId}&skuId=${id}&country=TW&locale=zh-Hant&appId=com.nike.commerce.snkrs.web&returnUrl=https://www.nike.com/tw/launch/t/${
+                  href={`https://gs.nike.com/?checkoutId=${uuid4()}&launchId=${lid}&skuId=${id}&country=TW&locale=zh-Hant&appId=com.nike.commerce.snkrs.web&returnUrl=https://www.nike.com/tw/launch/t/${
                     item.productContent.slug
                   }/`}
                   target='_blank'
