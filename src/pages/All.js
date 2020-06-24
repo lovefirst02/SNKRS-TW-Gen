@@ -38,7 +38,7 @@ function Products() {
     <>
       {s.map(({ productInfo }) =>
         productInfo.map((item) => (
-          <Link to={`/${item.merchProduct.styleColor}`}>
+          <Link to={{ pathname: `/${item.merchProduct.id}`, state: { modal: true } }} target='_self'>
             <Card id={item.merchProduct.styleColor} className='box'>
               <Card.Img id={item.merchProduct.styleColor} src={item.imageUrls.productImageUrl} to />
               <Card.Body>

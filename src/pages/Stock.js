@@ -1,17 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useLocation } from 'react-router-dom';
 import Time from '../componet/time';
 import StockLevel from '../componet/level';
 import { v4 as uuid4 } from 'uuid';
-import launchId from '../componet/launchId';
 import { Button, Card, ButtonGroup } from 'react-bootstrap';
+import useLaunhId from '../componet/launchId';
 
 const api =
   'https://api.nike.com/product_feed/threads/v2/?anchor=0&count=50&filter=marketplace%28TW%29&filter=language%28zh-Hant%29&filter=upcoming%28true%29&filter=channelId%28010794e5-35fe-4e32-aaff-cd2c74f89d61%29';
 
 function Stock() {
+  const { state = {} } = useLocation();
+  const { modal } = state;
   const [pd, setPd] = useState([]);
   let { id } = useParams();
+  const launchId = useLaunhId(id);
 
   const getSnkrs = () => {
     fetch(api)
@@ -19,7 +22,7 @@ function Stock() {
       .then((json) => {
         json.objects.map((item) => {
           item.productInfo.map((i) => {
-            if (i.merchProduct.styleColor === id) {
+            if (i.merchProduct.id === id) {
               setPd([item]);
             }
           });
@@ -93,9 +96,7 @@ function Stock() {
             item.skus.map(({ id, countrySpecifications, nikeSize }) =>
               countrySpecifications.map(({ localizedSize }) => (
                 <Button
-                  href={`https://gs.nike.com/?checkoutId=${uuid4()}&launchId=${launchId(
-                    item.merchProduct.id
-                  )}&skuId=${id}&country=TW&locale=zh-Hant&appId=com.nike.commerce.snkrs.web&returnUrl=https://www.nike.com/tw/launch/t/${
+                  href={`https://gs.nike.com/?checkoutId=${uuid4()}&launchId=${launchId}&skuId=${id}&country=TW&locale=zh-Hant&appId=com.nike.commerce.snkrs.web&returnUrl=https://www.nike.com/tw/launch/t/${
                     item.productContent.slug
                   }/`}
                   target='_blank'
