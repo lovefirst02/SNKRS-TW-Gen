@@ -1,68 +1,30 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# SNKRS Gen React Project
 
-## Available Scripts
+### 首頁 - 近期即將開放抽籤的鞋款 - 點擊鞋款即可進入詳細頁面
 
-In the project directory, you can run:
+![](SNKRS%20Gen%20React%20Project/%E6%88%AA%E5%9C%96%202020-06-25%20%E4%B8%8B%E5%8D%881.40.10.png)
 
-### `yarn start`
+### 詳細頁面 - 包含庫存以及抽籤提早連結
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![](SNKRS%20Gen%20React%20Project/%E6%88%AA%E5%9C%96%202020-06-25%20%E4%B8%8B%E5%8D%881.40.38.png)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### ＢＵＧ 以及正在處理的問題
 
-### `yarn test`
+1. 行動裝置版面錯亂
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 部署方法
 
-### `yarn build`
+環境需要NodeJS以及React框架
+詳細環境安裝方法 Google搜尋
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+npm run build 
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+yarn build
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 測試網站
 
-### `yarn eject`
+[點擊進入](https://ecstatic-borg-e4eeef.netlify.app/)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### 製作者
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+[FaceBook](https://www.facebook.com/jiouhao.wang/)   [Twitter](https://twitter.com/jiouhaowang)
