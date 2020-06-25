@@ -1,12 +1,12 @@
-# SNKRS Gen React Project
+# SNKRS TW Gen React Project
 
 ### 首頁 - 近期即將開放抽籤的鞋款 - 點擊鞋款即可進入詳細頁面
 
-![](SNKRS%20Gen%20React%20Project/Snkr1.png)
+![](Snkr2.png)
 
 ### 詳細頁面 - 包含庫存以及抽籤提早連結
 
-![](SNKRS%20Gen%20React%20Project/Snkr2.png)
+![](Snkr1.png)
 
 ### ＢＵＧ 以及正在處理的問題
 

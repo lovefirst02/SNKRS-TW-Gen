@@ -166,7 +166,7 @@ function Stock() {
         </div>
         <div className='col-4 justify-content-center align-items-center'>
           <Card className='text-center text-white' style={{ margin: '10px', background: '#5f5f64' }}>
-            <Card.Header as='h5'>尺碼-庫存</Card.Header>
+            <Card.Header as='h5'>抽籤連結</Card.Header>
             <Card.Body style={{ margin: '62px' }}>
               <ButtonGroup vertical>
                 <Gen s={pd} />
