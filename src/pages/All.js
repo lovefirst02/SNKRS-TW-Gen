@@ -50,15 +50,15 @@ function Products() {
 
   return (
     <>
-      <div className='row'>
+      <div className='row bgh'>
         <All s={allPd} />
       </div>
-      <div className='col-4 offset-4 justify-content-center align-items-center'>
+      <div className='col-4 offset-4'>
         <Card className='text-center text-white' style={{ margin: '50px', background: '#5f5f64' }}>
           <Card.Header as='h5'>說明</Card.Header>
-          <Card.Body style={{ margin: '25px' }}>
+          <Card.Body style={{ margin: '10px' }}>
             <Card.Text>點擊產品即可進入產品庫存與抽籤連結頁面</Card.Text>
-            <footer style={{ margin: '30px', fontSize: '10px' }}>Made by Cody#3850</footer>
+            <footer style={{ margin: '10px', fontSize: '10px' }}>Made by Cody#3850</footer>
             <a class='btn btn-icon btn-twitter' href='https://twitter.com/jiouhaowang' target='_blank'>
               <i class='fa fa-twitter'></i>
               <span>Twitter</span>

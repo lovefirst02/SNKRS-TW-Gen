@@ -1,6 +1,11 @@
 body {
-  background-image: url(background.jpg);
+  background-image: url(shutterstock_1033375480.jpg);
   background-size: 100%;
+}
+html {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1em;
+  height: 100%;
 }
 
 .App {
@@ -9,15 +14,15 @@ body {
   flex-wrap: wrap;
 }
 
-.App a {
+.row a {
   text-decoration: none;
 }
 
-.App a :hover {
+.bgh a :hover {
   background-color: #d3c49d;
 }
 
-.App a p {
+.row a p {
   color: black;
 }
 
