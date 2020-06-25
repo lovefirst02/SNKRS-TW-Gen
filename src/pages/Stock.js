@@ -77,6 +77,15 @@ function Stock() {
                     : status === 'NOT_ACCEPTING_ENTRIES'
                     ? '尚未接受投籤'
                     : '開放投籤'}
+                  <a
+                    class='btn btn-info'
+                    href={`https://www.nike.com/tw/launch/t/${item.productContent.slug}`}
+                    role='button'
+                    target='_blank'
+                    style={{ marginLeft: '50px' }}
+                  >
+                    點我去SNKRS頁面
+                  </a>
                 </p>
               </Card.Text>
             </Card.Body>
@@ -117,7 +126,8 @@ function Stock() {
                   }/`}
                   target='_blank'
                   variant='secondary'
-                  style={{ height: '30px', margin: '2px' }}
+                  style={{ margin: '2px' }}
+                  className='btn-lg'
                 >
                   US {nikeSize} -- {localizedSize}
                 </Button>
