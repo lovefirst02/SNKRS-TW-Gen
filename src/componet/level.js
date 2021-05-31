@@ -9,7 +9,7 @@ class Stocklevel extends React.Component {
   }
 
   componentDidMount() {
-    const url = `https://api.nike.com/deliver/available_skus/v1/${this.props.id}`;
+    const url = `https://distracted-brown-13aaee.netlify.app/.netlify/functions/api/stock/${this.props.id}`
     fetch(url)
       .then((res) => res.json())
       .then((json) => {
