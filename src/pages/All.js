@@ -5,7 +5,7 @@ import { Card, Accordion, Button } from 'react-bootstrap';
 import '../social.css';
 
 const api =
-  'https://api.nike.com/product_feed/threads/v2/?anchor=0&count=50&filter=marketplace%28TW%29&filter=language%28zh-Hant%29&filter=upcoming%28true%29&filter=channelId%28010794e5-35fe-4e32-aaff-cd2c74f89d61%29';
+  'https://distracted-brown-13aaee.netlify.app/.netlify/functions/api';
 
 function Products() {
   const [allPd, setAllPd] = useState([]);
