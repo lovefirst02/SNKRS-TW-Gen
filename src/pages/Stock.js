@@ -79,7 +79,7 @@ function Stock() {
                     : '開放投籤'}
                   <a
                     class='btn btn-info'
-                    href={`https://www.nike.com/my/launch/t/${item.productContent.slug}`}
+                    href={`https://www.nike.com/tw/launch/t/${item.productContent.slug}`}
                     role='button'
                     target='_blank'
                     style={{ marginLeft: '50px' }}
@@ -121,7 +121,7 @@ function Stock() {
             item.skus.map(({ id, countrySpecifications, nikeSize }) =>
               countrySpecifications.map(({ localizedSize }) => (
                 <Button
-                  href={`https://gs.nike.com/?checkoutId=${uuid4()}&launchId=${lid}&skuId=${id}&country=MY&locale=en-GB&appId=com.nike.commerce.snkrs.web&returnUrl=https://www.nike.com/my/launch/t/${
+                  href={`https://gs.nike.com/?checkoutId=${uuid4()}&launchId=${lid}&skuId=${id}&country=TW&locale=zh-Hant&appId=com.nike.commerce.snkrs.web&returnUrl=https://www.nike.com/my/launch/t/${
                     item.productContent.slug
                   }/`}
                   target='_blank'
